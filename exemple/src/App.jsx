@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * Composant principal — démonstration des bases de React :
@@ -44,6 +44,25 @@ function App() {
     e.preventDefault();
     console.log(email, message);
   };
+
+  // Par défaut, useEffect est appelé :
+  // - Au chargement de la page
+  // - a chaque modification d'un useState
+  useEffect(() => {
+    console.log("UseEffect");
+  });
+
+  // Avec le 2eme parametre, je peux préciser un tableau de state à "écouter"
+  // Et donc le useEffect s'appel au chargement de la page et a chaque modification de ce state
+  useEffect(() => {
+    console.log('useEffect - Counter');
+  }, [counter]);
+
+  // Appel useEffect au chargement
+  // Et c'est tout
+  useEffect(() => {
+    console.log("UseEffect - Chargement");
+  }, []);
 
   // ─── Rendu JSX ───────────────────────────────────────────────────────────────
   // Le return doit contenir une seule racine (ici un fragment <>…</>).
