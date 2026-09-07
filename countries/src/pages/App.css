@@ -1,0 +1,122 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  text-align: left;
+}
+
+.app h1 {
+  margin: 0 0 1.25rem;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.recherche {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.recherche input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #0f172a;
+}
+
+.recherche input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: #2563eb;
+}
+
+.recherche button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recherche button:hover {
+  background: #1d4ed8;
+}
+
+.liste-pays {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.carte-pays {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.carte-pays img {
+  width: 48px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.carte-pays div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.carte-pays strong {
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.carte-pays span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.vide {
+  color: #64748b;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app h1,
+  .carte-pays strong {
+    color: #f8fafc;
+  }
+
+  .recherche input,
+  .carte-pays {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+  }
+
+  .carte-pays span,
+  .vide {
+    color: #94a3b8;
+  }
+
+  .carte-pays img {
+    border-color: #334155;
+  }
+}
