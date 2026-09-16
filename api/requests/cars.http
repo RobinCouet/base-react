@@ -1,0 +1,3 @@
+GET http://localhost:3000/cars
+User-Agent: PostmanRuntime/7.32.3
+Accept: */*

@@ -21,6 +21,18 @@ class CarController {
 
         res.json(car);
     }
+
+    create = async (req, res) => {
+        const { model, brand, year } = req.body;
+
+        const car = await Car.create({
+            model,
+            brand,
+            year
+        });
+
+        res.json(car);
+    }
 }
 
 export default new CarController;
