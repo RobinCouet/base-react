@@ -49,6 +49,10 @@ class UserController {
             httpOnly: true
         }).json(user);
     }
+
+    logout = async (req, res) => {
+        res.clearCookie('token').json(true);
+    }
 }
 
 export default new UserController;
